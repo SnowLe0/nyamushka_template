@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/nyamushka_template/static/css/main.9f30dcc5.chunk.css",
+    "main.js": "/nyamushka_template/static/js/main.a3eead8f.chunk.js",
+    "main.js.map": "/nyamushka_template/static/js/main.a3eead8f.chunk.js.map",
+    "runtime-main.js": "/nyamushka_template/static/js/runtime-main.4266a07c.js",
+    "runtime-main.js.map": "/nyamushka_template/static/js/runtime-main.4266a07c.js.map",
+    "static/js/2.d9c074b5.chunk.js": "/nyamushka_template/static/js/2.d9c074b5.chunk.js",
+    "static/js/2.d9c074b5.chunk.js.map": "/nyamushka_template/static/js/2.d9c074b5.chunk.js.map",
+    "index.html": "/nyamushka_template/index.html",
+    "precache-manifest.0115456cda12e05962b36c23d126e0c3.js": "/nyamushka_template/precache-manifest.0115456cda12e05962b36c23d126e0c3.js",
+    "service-worker.js": "/nyamushka_template/service-worker.js",
+    "static/css/main.9f30dcc5.chunk.css.map": "/nyamushka_template/static/css/main.9f30dcc5.chunk.css.map",
+    "static/js/2.d9c074b5.chunk.js.LICENSE.txt": "/nyamushka_template/static/js/2.d9c074b5.chunk.js.LICENSE.txt",
+    "static/media/Cat.png": "/nyamushka_template/static/media/Cat.99e40e48.png",
+    "static/media/App.scss": "/nyamushka_template/static/media/Exo2.0-Thin.21badd0c.woff",
+    "static/media/OfferBlock.scss": "/nyamushka_template/static/media/Trebuchet-MS.15ae7724.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4266a07c.js",
+    "static/js/2.d9c074b5.chunk.js",
+    "static/css/main.9f30dcc5.chunk.css",
+    "static/js/main.a3eead8f.chunk.js"
+  ]
+}
