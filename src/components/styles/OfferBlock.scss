@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'Trebuchet MS';
+    src: local('Trebuchet MS'), url(./../../fonts/Trebuchet-MS.woff) format('woff');
+}
+
+$colorDefault: #1597d9;
+$colorDefaultHover: #2da7e5;
+$colorDisabled: #b3b3b3;
+$colorSelected: #d91567;
+$colorSelectedHover: #e52d7a;
+
+.offerBlock {
+
+    $parrent: &;
+
+    display: inline-block;
+    margin: 0 40px;
+    vertical-align: middle;
+
+    &__postscript {
+        font-size: 13px;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+    &__postscript__link {
+        color: $colorDefault;
+        border-color: $colorDefault;
+        border-bottom: 1px dashed;
+        cursor: pointer;
+
+        &:hover {
+            border: 0;
+            color: $colorDefaultHover;
+        }
+    }
+    &_disabled &__postscript {
+        color: #ffff66;
+    }
+
+    @at-root .offerCard {
+
+        $children: &;
+
+        position: relative;
+        margin-bottom: 15px;
+        cursor: pointer;
+        user-select: none;
+        width: 320px;
+        height: 480px;
+        text-align: left;
+        padding: 20px 50px;
+        box-sizing: border-box;
+        color: #666666;
+    
+        &__base {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            
+            &__group {
+                fill: #fff;
+                stroke: $colorDefault;
+                stroke-width: 8px;
+            }
+        }
+        &__slogan {
+            font-size: 16px;
+            font-weight: normal;
+            margin: 0 0 6px 0;
+        }
+        &__brand {
+            font-size: 48px;
+            margin: 0;
+            color: #000;
+        }
+        &__additive {
+            font-size: 24px;
+            margin: 0 0 15px 0;
+            color: #000;
+        }
+        &__weight {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: $colorDefault;
+            bottom: 15px;
+            right: 15px;
+            color: #fff;
+            text-align: center;
+            line-height: 1;
+            padding: 10px 0;
+            box-sizing: border-box;
+    
+            &__number {
+                font-size: 42px;
+            }
+            &__measure {
+                font-size: 21px;
+            }
+        }
+    
+        &:hover &__base {
+            &__group {
+                stroke: $colorDefaultHover;
+            }
+        }
+        &:hover &__weight {
+            background: $colorDefaultHover;
+        }
+
+        #{$parrent}_selected & {
+            &__base {
+                &__group {
+                    stroke: $colorSelected;
+                }
+            }
+            &__slogan {
+                &__hiddenText {
+                    display: none;
+                    color: $colorSelectedHover;
+                }
+            }
+            &__weight {
+                background: $colorSelected;
+            }
+            &:hover #{$children}__base {
+                &__group {
+                    stroke: $colorSelectedHover;
+                }
+            }
+            &:hover #{$children}__slogan {
+                &__text {
+                    display: none;
+                }
+            }
+            &:hover #{$children}__slogan {
+                &__hiddenText {
+                    display: inline;
+                }
+            }
+            &:hover #{$children}__weight {
+                background: $colorSelectedHover;
+            }
+        }
+        #{$parrent}#{$parrent}_disabled & {
+            cursor: default;
+            color: $colorDisabled;
+
+            &__brand, &__additive {
+                color: inherit;
+            }
+            &__base {
+                &__group {
+                    stroke: $colorDisabled;
+                    &__img {
+                        opacity: 0.5;
+                    }
+                }
+            }
+            &__weight {
+                background: $colorDisabled;
+            }
+        }
+    }
+}

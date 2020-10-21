@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  
+  reactapp_service:
+      build: ./
+      image: reactapp:v0.1
+      container_name: reactapp
+      ports:
+          - 3000:80

@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Exo';
+  src: local('Exo2.0-Thin'), url(./../fonts/Exo2.0-Thin.woff) format('woff');
+}
+.App {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+
+  &__slogan {
+    margin: 0 0 25px 0;
+    font-family: Exo;
+    font-size: 36px;
+    color: #fff;
+  }
+}
